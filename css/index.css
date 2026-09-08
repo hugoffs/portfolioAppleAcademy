@@ -51,7 +51,7 @@ body {
 
 
 /* =========================
-   TEXTURA
+    TEXTURA
 ========================= */
 
 .textura {
@@ -70,7 +70,7 @@ body {
 
 
 /* =========================
-   PEÇAS DE XADREZ
+    PEÇAS DE XADREZ
 ========================= */
 
 .telaDireita img:not(.textura) {
@@ -92,11 +92,9 @@ body {
     right: 5px;
 }
 
-
 /* =========================
-   BOTÕES
+    BOTÕES
 ========================= */
-
 .botoes {
     position: relative;
 
@@ -111,12 +109,17 @@ body {
     padding-top: 130px;
 }
 
-.botoes button {
+
+.botoes a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
     width: 80%;
 
     padding: 12px 20px;
 
-    border: none;
     border-radius: 7px;
 
     background-color: rgba(0, 0, 0, 0.65);
@@ -125,5 +128,17 @@ body {
 
     font-size: 32px;
 
+    text-decoration: none;
+
     cursor: pointer;
+
+    transition: transform 0.2s ease,
+                background-color 0.2s ease;
 }
+
+.botoes a:hover {
+    transform: scale(1.03);
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+

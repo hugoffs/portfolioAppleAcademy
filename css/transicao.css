@@ -1,0 +1,31 @@
+/* =========================
+    TRANSIÇÃO
+========================= */
+
+
+.transicao {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/transicao.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 100;
+
+    transform: translateX(100%);
+
+    transition: transform 1.2s ease-in-out;
+
+    pointer-events: none;
+}
+
+.transicao.ativo {
+    transform: translateX(0);
+}
