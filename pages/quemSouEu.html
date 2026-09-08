@@ -1,81 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Quem Sou Eu</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/quemSouEu.css">
+    <link rel="stylesheet" href="../css/transicao.css">
 
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tienne:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- JavaScript -->
+    <script src="../js/index.js" defer></script>
     <script src="../js/carrocel.js" defer></script>
-
+    <script src="../js/musicas.js" defer></script>
 </head>
+
+
 <body>
 
+    <!-- =========================
+         TRANSIÇÃO
+    ========================== -->
+
+    <div class="transicao"></div>
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
     <header>
-        <div class="cabecario">
+
+        <nav class="cabecario">
+
             <ul>
-                <li>Minha História</li>
-                <li>Hobbies e Sonhos</li>
-                <li>Ingressão na computação</li>
-                <li>Minha Rotina </li>
-                <li>Férias</li>
-                <button> Voltar</button>
+
+                <li>
+                    <a href="#minhaHistoria">
+                        Minha História
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#hobbies">
+                        Hobbies e Sonhos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#ingressaoComputacao">
+                        Ingressão na Computação
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#minhaRotina">
+                        Minha Rotina
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#ferias">
+                        Férias
+                    </a>
+                </li>
+
             </ul>
-        </div>
+
+
+            <!-- VOLTAR -->
+
+            <a href="../index.html" class="btnVoltar">
+                ← Voltar A página Principal
+            </a>
+
+        </nav>
+
     </header>
 
-    <section class="minhaHistoria">
+
+    <!-- =========================
+         MINHA HISTÓRIA
+    ========================== -->
+
+    <section id="minhaHistoria" class="minhaHistoria">
 
         <div class="textoMinhaHistoria">
 
-            <h1>Minha História</h1>
+            <h1>
+                Minha História
+            </h1>
 
-            <p class="titulo">Olá meu nome é Hugo :D</p>
+            <p class="titulo">
+                Olá meu nome é Hugo :D
+            </p>
 
             <p class="texto">
-                Nasci em Curitiba, mas vivi sempre em Araucária. Cresci sempre
-                gostando de praticar diversos esportes, como futebol, e fui
-                bicampeão de capoeira. Sendo uma criança muito hiperativa e
-                curiosa, sempre gostei de ver pessoas conversando e sorrindo.
 
-                Admiro muito meu irmão. Viemos de uma família mais humilde e
-                estudamos em escola pública. Com 14 anos, ele conseguiu passar na
-                UFPR para cursar o técnico de petróleo e gás. A partir disso,
-                nossa vida mudou: ele se distanciou de mim no ensino médio,
-                porém sempre esteve me incentivando a estudar cada vez mais.
+                Nasci em Curitiba, mas vivi sempre em Araucária.
+                Cresci sempre gostando de praticar diversos esportes,
+                como futebol, e fui bicampeão de capoeira.
+                Sendo uma criança muito hiperativa e curiosa,
+                sempre gostei de ver pessoas conversando e sorrindo.
+
+                Admiro muito meu irmão. Viemos de uma família mais humilde
+                e estudamos em escola pública. Com 14 anos, ele conseguiu
+                passar na UFPR para cursar o técnico de petróleo e gás.
+
+                A partir disso, nossa vida mudou: ele se distanciou de mim
+                no ensino médio, porém sempre esteve me incentivando
+                a estudar cada vez mais.
+
             </p>
 
         </div>
 
+
         <div class="imagemMinhaHistoria">
-            <img src="../img/capoeira.png" alt="Imagem de quem sou eu">
+
+            <img
+                src="../img/capoeira.png"
+                alt="Capoeira"
+            >
+
         </div>
+
     </section>
+
 
     <div class="linha"></div>
 
-    <section class="hobbies">
+
+    <!-- =========================
+         HOBBIES E SONHOS
+    ========================== -->
+
+    <section id="hobbies" class="hobbies">
 
         <div class="carousel">
 
             <div class="imagemCarousel">
-                <img 
+
+                <img
                     id="imagemAtual"
                     src="../img/viagem.png"
                     alt="Hobbies e sonhos"
                 >
+
             </div>
+
 
             <div class="controlesCarousel">
 
-                <button class="btnCarousel" id="anterior">
+                <button
+                    class="btnCarousel"
+                    id="anterior"
+                    aria-label="Imagem anterior"
+                >
                     &lt;
                 </button>
 
-                <div class="indicadores" id="indicadores"></div>
 
-                <button class="btnCarousel" id="proximo">
+                <div
+                    class="indicadores"
+                    id="indicadores"
+                ></div>
+
+
+                <button
+                    class="btnCarousel"
+                    id="proximo"
+                    aria-label="Próxima imagem"
+                >
                     &gt;
                 </button>
 
@@ -86,23 +196,358 @@
 
         <div class="textoHobbies">
 
-            <h2>Hobbies e Sonhos</h2>
+            <h2>
+                Hobbies e Sonhos
+            </h2>
 
             <p>
-                Sempre fui muito curioso e tive diversos hobbies, como desenhar,
-                pintar, fazer bordado, praticar esportes e jogos online. Hoje em
-                dia, gosto muito de cozinhar e aprender receitas novas.
+
+                Sempre fui muito curioso e tive diversos hobbies,
+                como desenhar, pintar, fazer bordado, praticar esportes
+                e jogos online. Hoje em dia, gosto muito de cozinhar
+                e aprender receitas novas.
+
             </p>
 
             <p>
-                Meu sonho quando era criança era visitar o Brasil inteiro e
-                observar o quanto nosso país é bonito. Fiz minha primeira viagem
-                em 2025 e consegui conhecer as Cataratas do Iguaçu.
+
+                Meu sonho quando era criança era visitar o Brasil inteiro
+                e observar o quanto nosso país é bonito.
+
+                Fiz minha primeira viagem em 2025 e consegui conhecer
+                as Cataratas do Iguaçu.
+
             </p>
 
         </div>
 
     </section>
 
+
+    <!-- =========================
+         MÚSICAS
+    ========================== -->
+
+    <section class="musica">
+
+        <div class="textoMusica">
+
+            <h2>
+                Músicas
+            </h2>
+
+            <p>
+
+                Sempre gostei de ouvir música, ouço de tudo,
+                porém o movimento hip hop é onde estão
+                minhas músicas preferidas.
+
+            </p>
+
+        </div>
+
+
+        <div class="blocoMusicas">
+
+
+            <!-- MÚSICA 1 -->
+
+            <div class="musicaCard">
+
+                <img
+                    src="../img/junhoDe94.png"
+                    alt="Junho de 94"
+                >
+
+                <p>
+                    Junho de 94
+                </p>
+
+                <audio
+                    src="../musicas/junhoDe94.mp3"
+                    data-inicio="60"
+                    data-duracao="15"
+                ></audio>
+
+            </div>
+
+
+            <!-- MÚSICA 2 -->
+
+            <div class="musicaCard">
+
+                <img
+                    src="../img/convoqueSeuBuda.png"
+                    alt="Convoque seu Buda"
+                >
+
+                <p>
+                    Convoque seu Buda
+                </p>
+
+                <audio
+                    src="../musicas/convoqueSeuBuda.mp3"
+                    data-inicio="45"
+                    data-duracao="15"
+                ></audio>
+
+            </div>
+
+
+            <!-- MÚSICA 3 -->
+
+            <div class="musicaCard">
+
+                <img
+                    src="../img/euPrecisavaVoltarComAFolinha.png"
+                    alt="Eu precisava voltar com a Folhinha"
+                >
+
+                <p>
+                    Eu precisava voltar com a Folhinha
+                </p>
+
+                <audio
+                    src="../musicas/euPrecisavaVoltarComAFolinha.mp3"
+                    data-inicio="70"
+                    data-duracao="15"
+                ></audio>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INGRESSÃO NA COMPUTAÇÃO
+    ========================== -->
+
+    <section
+        id="ingressaoComputacao"
+        class="ingressaoComputacao"
+    >
+
+        <div class="textoIngressao">
+
+            <h2>
+                Ingressão na Computação
+            </h2>
+
+
+            <p>
+
+                Meu ingresso no mundo da computação começou com o Minecraft:
+                eu só queria jogar com meus amigos no multiplayer, mas isso
+                me fez cair de cabeça no mundo da internet e da programação.
+
+                Comecei a estudar de maneira autodidata, sempre ouvindo
+                uma boa música.
+
+            </p>
+
+
+            <p>
+
+                Durante a pandemia, ingressei na primeira turma do cursinho
+                popular AJA (Associação Juventude de Araucária), que tem como
+                objetivo levar a população araucariense às universidades.
+
+                Consegui passar em 2024 e, hoje, sou estudante de Ciência
+                da Computação na PUCPR, seguindo essa mesma curiosidade
+                que me trouxe até aqui.
+
+            </p>
+
+        </div>
+
+
+        <div class="imagemIngressao">
+
+            <img
+                src="../img/mine.png"
+                alt="Minecraft"
+            >
+
+        </div>
+
+    </section>
+
+
+    <div class="linha"></div>
+
+
+    <!-- =========================
+         MINHA ROTINA
+    ========================== -->
+
+    <section
+        id="minhaRotina"
+        class="minhaRotina"
+    >
+
+
+        <!-- PRIMEIRA LINHA -->
+
+        <div class="rotinaLinha">
+
+
+            <div class="rotinaImagem">
+
+                <img
+                    src="../img/codigo.png"
+                    alt="Estudando programação"
+                >
+
+            </div>
+
+
+            <div class="rotinaTexto">
+
+                <h2>
+                    Minha Rotina
+                </h2>
+
+
+                <p>
+
+                    Basicamente, minha rotina se concentra em estudos,
+                    esportes e jogos. Curso a faculdade de segunda a sexta
+                    e, há mais de um ano, faço um curso de inglês com o
+                    intuito de me tornar fluente, o que facilita a leitura
+                    de artigos científicos e o entendimento de novas culturas.
+
+                </p>
+
+
+                <p>
+
+                    Durante a semana, também pratico esportes, treinando
+                    na academia com meu irmão, além de estudar matérias
+                    da faculdade ou de outras áreas, como Filosofia,
+                    Sociologia e História.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEGUNDA LINHA -->
+
+        <div class="rotinaLinha">
+
+
+            <div class="rotinaImagem">
+
+                <a
+                    href="https://www.youtube.com/watch?v=BGLpXF0bqD4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <img
+                        src="../img/video.png"
+                        alt="Vídeo sobre xadrez"
+                    >
+
+                </a>
+
+            </div>
+
+
+            <div class="rotinaTexto">
+
+                <p>
+
+                    Gosto também de acompanhar o mundo do xadrez a partir
+                    do canal "Raffael Chess". Me apaixonei pelo jogo depois
+                    de ter visto a Imortal de Garry Kasparov contra Topalov,
+                    uma partida histórica e muito bonita.
+
+                </p>
+
+
+                <p>
+
+                    Outro jogo que acompanho é Valorant, e estou aguardando
+                    o início do campeonato mais importante do ano, o Champions,
+                    torcendo para o único time brasileiro classificado,
+                    a LOUD.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FÉRIAS
+    ========================== -->
+
+    <section
+        id="ferias"
+        class="ferias"
+    >
+
+        <div class="textoFerias">
+
+            <h2>
+                Férias
+            </h2>
+
+
+            <p>
+
+                Nas minhas férias, gosto de buscar conhecimento de outra
+                forma: a partir de shows, leituras e vídeos. Isso porque,
+                durante o ano, passo a maior parte do tempo focando e
+                estudando o mundo da computação. Por isso, nas férias,
+                gosto de variar os temas de estudo.
+
+            </p>
+
+        </div>
+
+
+        <div class="imagemFerias">
+
+            <img
+                src="../img/tomJobim.png"
+                alt="Teatro Tom Jobim"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="rodape">
+
+        <h2>
+            Hugo Fagundes
+        </h2>
+
+
+        <a
+            href="../index.html"
+            class="btnVoltar"
+        >
+            ← &nbsp; Voltar A página Principal
+        </a>
+
+    </footer>
+
+
 </body>
+
 </html>

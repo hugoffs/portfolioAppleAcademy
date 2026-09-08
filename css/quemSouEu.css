@@ -1,6 +1,20 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
 body {
     margin: 0;
+
     background-color: #282A2E;
+
+    color: #FFFFFF;
+
+    font-family: Ubuntu, sans-serif;
 }
 
 
@@ -10,46 +24,121 @@ body {
 
 header {
     position: fixed;
+
     top: 0;
     left: 0;
 
     width: 100%;
-    height: 79px;
+    height: 90px;
+
+    padding: 10px 20px;
+
+    box-sizing: border-box;
+
+    background-color: #282A2E;
 
     z-index: 1000;
 }
 
+
+/* =========================
+   BARRA DO CABEÇALHO
+========================= */
+
 .cabecario {
-    margin: 10px;
-    width: calc(100% - 20px);
-    height: 79px;
+    width: 100%;
+    height: 70px;
+
+    padding: 0 25px;
 
     display: flex;
+
     align-items: center;
 
-    border: 1px solid #0C565E;
+    justify-content: space-between;
+
     box-sizing: border-box;
+
+    background-color: #282A2E;
+
+    border: 1px solid #0C565E;
+
+    border-radius: 12px;
 }
+
+
+/* =========================
+   MENU
+========================= */
 
 .cabecario ul {
-    list-style: none;
-
     display: flex;
 
-    padding: 10px;
-    margin-left: 5%;
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
 
-.cabecario ul li {
-    margin: 0 10px;
 
+/* =========================
+   LINKS DO MENU
+========================= */
+
+.cabecario ul li a {
     color: #2CB8BC;
 
-    font-family: Tienne;
-    font-size: 24px;
-    font-style: normal;
+    font-family: Ubuntu, sans-serif;
+
+    font-size: 17px;
+
     font-weight: 700;
-    line-height: normal;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+
+.cabecario ul li a:hover {
+    color: #FFFFFF;
+
+    text-shadow:
+        0 0 10px rgba(44, 184, 188, 0.6);
+}
+
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+
+.btnVoltar {
+    padding: 10px 20px;
+
+    background-color: transparent;
+
+    font-family: Ubuntu, sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.btnVoltar:hover {
+
+    box-shadow:
+        0 0 15px rgba(44, 184, 188, 0.4);
 }
 
 
@@ -59,12 +148,14 @@ header {
 
 .minhaHistoria {
     width: 100%;
+
     min-height: 500px;
 
     display: flex;
+
     align-items: flex-start;
 
-    padding: 100px 5% 50px 5%;
+    padding: 130px 5% 50px 5%;
 
     box-sizing: border-box;
 
@@ -73,132 +164,154 @@ header {
 
 
 /* =========================
-   TEXTO
+   TEXTO MINHA HISTÓRIA
 ========================= */
 
 .textoMinhaHistoria {
     width: 50%;
+
     max-width: 700px;
 
     display: flex;
+
     flex-direction: column;
 
     margin: 0;
+
     padding: 0;
 }
 
 
-/* TÍTULO PRINCIPAL */
+/* =========================
+   TÍTULO
+========================= */
 
 .textoMinhaHistoria h1 {
-   margin-top: 10%;
+    margin: 10% 0 20px 0;
 
     color: #2CB8BC;
 
-    font-family: Tienne;
+    font-family: Tienne, serif;
+
     font-size: 56px;
+
     font-style: normal;
+
     font-weight: 400;
+
     line-height: 1.1;
 }
 
 
+/* =========================
+   SUBTÍTULO
+========================= */
 
 .textoMinhaHistoria p.titulo {
     margin: 0 0 18px 0;
 
     color: #218F92;
 
-    font-family: Ubuntu;
-    font-size: 18px;
-    font-style: normal;
+    font-family: Ubuntu, sans-serif;
 
-    /* normal, sem negrito */
+    font-size: 18px;
+
     font-weight: 400;
 
     line-height: normal;
-
-    /* sem sombra/contorno */
-    -webkit-text-stroke: 0;
 
     text-align: left;
 }
 
 
-/* TEXTO BRANCO */
+/* =========================
+   TEXTO
+========================= */
 
 .textoMinhaHistoria p.texto {
     margin: 0;
 
-    color: #FFF;
+    color: #FFFFFF;
 
-    font-family: Ubuntu;
+    font-family: Ubuntu, sans-serif;
+
     font-size: 18px;
-    font-style: normal;
 
-    /* texto normal */
     font-weight: 400;
 
-    line-height: 1.15;
+    line-height: 1.4;
 
-    /* texto normal, sem justificar */
     text-align: justify;
 
-    /* sem sombra */
     text-shadow: none;
 
-    /* sem contorno */
     -webkit-text-stroke: 0;
 }
 
+
 /* =========================
-   IMAGEM
+   IMAGEM MINHA HISTÓRIA
 ========================= */
 
 .imagemMinhaHistoria {
     width: 50%;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     padding-top: 30px;
 }
 
+
 .imagemMinhaHistoria img {
-    margin-top: 20px;
-    margin-left: 30px;
     width: 80%;
+
     max-width: 450px;
+
     height: auto;
+
+    margin-top: 20px;
+
+    margin-left: 30px;
 
     display: block;
 }
 
-/*==========================
-   Linha de Separação
+
+/* =========================
+   LINHA DE SEPARAÇÃO
 ========================= */
-.linha{
-    margin-left: 5%;
+
+.linha {
     width: 85%;
+
     height: 4px;
-    transform: rotate(-0.123deg);
-    stroke-width: 4px;
-    stroke: #414141;
-    box-shadow: 0 20px 4px 0 rgba(0, 0, 0, 0.25) inset
+
+    margin-left: 5%;
+
+    background-color: #414141;
+
+    box-shadow:
+        0 20px 4px 0 rgba(0, 0, 0, 0.25) inset;
 }
 
 
 /* =========================
-   HOBBIES E SONHOS
+   HOBBIES
 ========================= */
 
 .hobbies {
     width: 100%;
+
     min-height: 500px;
 
     display: flex;
+
     align-items: flex-start;
+
     gap: 8%;
 
     padding: 60px 6%;
@@ -215,14 +328,18 @@ header {
 
 .carousel {
     width: 45%;
+
     max-width: 500px;
 }
 
 
-/* IMAGEM */
+/* =========================
+   IMAGEM DO CARROSSEL
+========================= */
 
 .imagemCarousel {
     width: 485px;
+
     height: 445px;
 
     overflow: hidden;
@@ -230,8 +347,10 @@ header {
     border-radius: 20px;
 }
 
+
 .imagemCarousel img {
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -248,28 +367,36 @@ header {
     width: 100%;
 
     display: flex;
+
     align-items: center;
 
     margin-top: 25px;
 }
 
 
-/* BOTÕES < > */
+/* =========================
+   BOTÕES DO CARROSSEL
+========================= */
 
 .btnCarousel {
     width: 28px;
+
     height: 28px;
 
     border: none;
+
     border-radius: 50%;
 
     background-color: #E8E8E8;
+
     color: #218F92;
 
     font-size: 18px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     cursor: pointer;
@@ -277,8 +404,10 @@ header {
     transition: 0.2s;
 }
 
+
 .btnCarousel:hover {
     background-color: #2CB8BC;
+
     color: #282A2E;
 }
 
@@ -291,6 +420,7 @@ header {
     flex: 1;
 
     display: flex;
+
     align-items: center;
 
     gap: 8px;
@@ -298,8 +428,6 @@ header {
     margin: 0 12px;
 }
 
-
-/* CADA BARRINHA */
 
 .indicador {
     height: 4px;
@@ -316,15 +444,13 @@ header {
 }
 
 
-/* BARRINHA ATIVA */
-
 .indicador.ativo {
     background-color: #2CB8BC;
 }
 
 
 /* =========================
-   TEXTO
+   TEXTO HOBBIES
 ========================= */
 
 .textoHobbies {
@@ -339,8 +465,10 @@ header {
 
     color: #2CB8BC;
 
-    font-family: Ubuntu;
+    font-family: Ubuntu, sans-serif;
+
     font-size: 20px;
+
     font-weight: 700;
 }
 
@@ -348,45 +476,816 @@ header {
 .textoHobbies p {
     margin: 0 0 20px 0;
 
+    color: #C0C0C0;
+
+    font-family: Ubuntu, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    text-align: justify;
+}
+
+
+/* =========================
+   MÚSICAS
+========================= */
+
+.musica {
+    width: 90%;
+
+    min-height: 500px;
+
+    margin-left: 5%;
+
+    padding: 50px 7%;
+
+    box-sizing: border-box;
+
+    background-color: #0D0F14;
+
+    border-radius: 30px;
+}
+
+
+/* =========================
+   TEXTO MÚSICA
+========================= */
+
+.textoMusica {
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.textoMusica h2 {
+    margin: 0 0 20px 0;
+
+    color: #2CB8BC;
+
+    font-family: Tienne, serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.textoMusica p {
+    margin: 0;
+
     color: #FFFFFF;
 
-    font-family: Ubuntu;
+    font-family: Ubuntu, sans-serif;
+
     font-size: 15px;
+
     font-weight: 400;
+
+    text-align: left;
+
+    padding-left: 0;
+}
+
+
+/* =========================
+   BLOCO DAS MÚSICAS
+========================= */
+
+.blocoMusicas {
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 45px 40px 20px 40px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    background-color: #383838;
+
+    border-radius: 40px;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   CARD DA MÚSICA
+========================= */
+
+.musicaCard {
+    width: 30%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    transition: transform 0.3s ease;
+}
+
+
+.musicaCard:hover {
+    transform: scale(1.08);
+
+    z-index: 10;
+}
+
+
+/* =========================
+   IMAGEM DA MÚSICA
+========================= */
+
+.musicaCard img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    display: block;
+
+    transition: 0.3s ease;
+}
+
+
+.musicaCard:hover img {
+    box-shadow:
+        0 0 20px rgba(44, 184, 188, 0.5);
+}
+
+
+/* =========================
+   NOME DA MÚSICA
+========================= */
+
+.musicaCard p {
+    margin: 10px 0 0 0;
+
+    color: #FFFFFF;
+
+    font-family: Ubuntu, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    text-align: justify;
+}
+
+
+/* =========================
+   ÁUDIO
+========================= */
+
+.musicaCard audio {
+    display: none;
+}
+
+
+/* =========================
+   INGRESSÃO NA COMPUTAÇÃO
+========================= */
+
+.ingressaoComputacao {
+    width: 90%;
+
+    min-height: 450px;
+
+    margin: 70px auto;
+
+    padding: 60px 7%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    background-color: #282A2E;
+}
+
+
+/* =========================
+   TEXTO COMPUTAÇÃO
+========================= */
+
+.textoIngressao {
+    width: 50%;
+}
+
+
+.textoIngressao h2 {
+    margin: 0 0 25px 0;
+
+    color: #2CB8BC;
+
+    font-family: Tienne, serif;
+
+    font-size: 35px;
+
+    font-weight: 400;
+}
+
+
+.textoIngressao p {
+    margin-top: 20px;
+
+    color: #FFFFFF;
+
+    font-family: Ubuntu, sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    text-align: justify;
+}
+
+
+/* =========================
+   IMAGEM COMPUTAÇÃO
+========================= */
+
+.imagemIngressao {
+    width: 45%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+
+.imagemIngressao img {
+    height: 353px;
+    width: 589px;
+
+    max-width: 450px;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 20px;
+}
+
+
+/* =========================
+   MINHA ROTINA
+========================= */
+
+.minhaRotina {
+    width: 92%;
+    margin: 50px auto;
+}
+
+/* Cada linha */
+.rotinaLinha {
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+    margin-bottom: 55px;
+}
+
+/* Imagens */
+.rotinaImagem {
+    width: 52%;
+    flex-shrink: 0;
+}
+
+.rotinaImagem img {
+    width: 100%;
+    display: block;
+}
+
+/* IMAGEM DO CÓDIGO */
+.rotinaLinha:first-child .rotinaImagem img {
+    width: 566px;
+    height: 281px;
+    object-fit: cover;
+}
+
+/* IMAGEM DO VÍDEO */
+.rotinaLinha:nth-child(2) .rotinaImagem img {
+    width: 566px;
+    height: 281px;
+    object-fit: cover;
+}
+
+/* Efeito no vídeo */
+.rotinaLinha:nth-child(2) .rotinaImagem a img {
+    transition: transform 0.3s ease;
+}
+
+.rotinaLinha:nth-child(2) .rotinaImagem a img:hover {
+    transform: scale(1.03);
+}
+
+/* Texto */
+.rotinaTexto {
+    flex: 1;
+}
+
+.minhaRotina h2 {
+    color: #2CB8BC;
+    font-family: Tienne, serif;
+    font-size: 35px;
+    margin-top: -8px;
+    margin-bottom: 14px;
+}
+
+.minhaRotina p {
+    color: #C0C0C0;
+    font-family: Ubuntu, sans-serif;
+    font-size: 17px;
+    line-height: 1.35;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+/* =========================
+   FÉRIAS
+========================= */
+
+.ferias {
+    width: 90%;
+
+    min-height: 465px;
+
+    margin: 50px auto 100px;
+
+    padding: 50px 50px;
+
+    box-sizing: border-box;
+
+    background-color: #101116;
+
+    border-radius: 70px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.textoFerias {
+    width: 55%;
+
+    align-self: flex-start;
+}
+
+
+.ferias h2 {
+    color: #2CB8BC;
+
+    font-family: Tienne, serif;
+
+    font-size: 35px;
+
+    margin: 0 0 55px 0;
+}
+
+
+.ferias p {
+    color: #FFFFFF;
+
+    font-family: Ubuntu, sans-serif;
+
+    font-size: 17px;
 
     line-height: 1.3;
 
-    text-align: left;
+    margin: 0;
 }
 
+
+/* =========================
+   IMAGEM
+========================= */
+
+.imagemFerias {
+    width: 35%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.imagemFerias img {
+    width: 100%;
+
+    height: 335px;
+
+    object-fit: cover;
+
+    border-radius: 35px;
+
+    display: block;
+}
 
 /* =========================
    RESPONSIVIDADE
 ========================= */
 
+@media (max-width: 1000px) {
+
+    .cabecario ul {
+        gap: 12px;
+    }
+
+    .cabecario ul li a {
+        font-size: 14px;
+    }
+
+    .btnVoltar {
+        padding: 8px 14px;
+
+        font-size: 14px;
+    }
+
+    .hobbies {
+        gap: 4%;
+    }
+
+    .imagemCarousel {
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 1 / 0.9;
+    }
+
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+    width: 100%;
+
+    min-height: 115px;
+
+    padding: 25px 5%;
+
+    box-sizing: border-box;
+
+    background-color: #282A2E;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================
+   NOME
+========================= */
+
+.rodape h2 {
+    margin: 0;
+
+    color: #2CB8BC;
+
+    font-family: Ubuntu, sans-serif;
+
+    font-size: 36px;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.btnVoltar {
+    padding: 10px 18px;
+
+    background-color: #101116;
+
+    color: #E53935;
+
+    border: 1px solid #000;
+
+    border-radius: 25px;
+
+    font-family: Ubuntu, sans-serif;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.btnVoltar:hover {
+    background-color: #000;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   TABLET / CELULAR
+========================= */
+
 @media (max-width: 768px) {
+
+    /* HEADER */
+
+    header {
+        height: auto;
+
+        padding: 10px;
+    }
+
+
+    .cabecario {
+        height: auto;
+
+        min-height: 70px;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .cabecario ul {
+        width: 100%;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+
+    .cabecario ul li a {
+        font-size: 13px;
+    }
+
+
+    .btnVoltar {
+        font-size: 14px;
+
+        padding: 8px 16px;
+    }
+
+
+    /* MINHA HISTÓRIA */
+
+    .minhaHistoria {
+        padding: 200px 8% 50px;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .textoMinhaHistoria {
+        width: 100%;
+    }
+
+
+    .textoMinhaHistoria h1 {
+        margin-top: 0;
+
+        font-size: 42px;
+
+        text-align: center;
+    }
+
+
+    .textoMinhaHistoria p.titulo {
+        text-align: center;
+    }
+
+
+    .textoMinhaHistoria p.texto {
+        font-size: 16px;
+
+        text-align: justify;
+    }
+
+
+    .imagemMinhaHistoria {
+        width: 100%;
+
+        padding-top: 40px;
+    }
+
+
+    .imagemMinhaHistoria img {
+        width: 90%;
+
+        margin: 0;
+    }
+
+
+    /* HOBBIES */
 
     .hobbies {
         flex-direction: column;
 
+        align-items: center;
+
         gap: 40px;
 
-        padding: 50px 5%;
+        padding: 50px 8%;
     }
+
 
     .carousel {
         width: 100%;
-        max-width: none;
     }
+
+
+    .imagemCarousel {
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 1 / 0.9;
+    }
+
 
     .textoHobbies {
         width: 100%;
     }
 
-    .imagemCarousel {
-        height: 300px;
+
+    .textoHobbies h2 {
+        font-size: 25px;
+
+        text-align: center;
+    }
+
+
+    /* MÚSICAS */
+
+    .musica {
+        width: 90%;
+
+        margin-left: 5%;
+
+        padding: 40px 5%;
+    }
+
+
+    .textoMusica p {
+        text-align: center;
+    }
+
+
+    .blocoMusicas {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 30px;
+
+        padding: 30px;
+    }
+
+
+    .musicaCard {
+        width: 80%;
+    }
+
+
+    /* COMPUTAÇÃO */
+
+    .ingressaoComputacao {
+        width: 90%;
+
+        flex-direction: column;
+
+        padding: 50px 5%;
+    }
+
+
+    .textoIngressao {
+        width: 100%;
+    }
+
+
+    .textoIngressao h2 {
+        font-size: 30px;
+
+        text-align: center;
+    }
+
+
+    .textoIngressao p {
+        font-size: 16px;
+    }
+
+
+    .imagemIngressao {
+        width: 100%;
+    }
+
+
+    /* ROTINA E FÉRIAS */
+
+    .minhaRotina,
+    .ferias {
+        width: 90%;
+
+        padding: 40px 20px;
+    }
+
+
+    .minhaRotina h2,
+    .ferias h2 {
+        font-size: 30px;
     }
 
 }
 
 
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 480px) {
+
+    .cabecario ul li a {
+        font-size: 12px;
+    }
+
+
+    .textoMinhaHistoria h1 {
+        font-size: 36px;
+    }
+
+
+    .textoMinhaHistoria p.texto {
+        font-size: 15px;
+    }
+
+
+    .imagemCarousel {
+        border-radius: 15px;
+    }
+
+
+    .blocoMusicas {
+        padding: 20px;
+    }
+
+
+    .musicaCard {
+        width: 100%;
+    }
+
+}
