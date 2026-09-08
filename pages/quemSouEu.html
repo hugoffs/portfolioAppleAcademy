@@ -7,29 +7,101 @@
 
     <link rel="stylesheet" href="../css/quemSouEu.css">
 
+    <script src="../js/carrocel.js" defer></script>
+
 </head>
 <body>
 
     <header>
         <div class="cabecario">
             <ul>
-                <li>Quem Sou Eu</li>
+                <li>Minha História</li>
                 <li>Hobbies e Sonhos</li>
                 <li>Ingressão na computação</li>
                 <li>Minha Rotina </li>
                 <li>Férias</li>
+                <button> Voltar</button>
             </ul>
         </div>
     </header>
 
     <section class="minhaHistoria">
+
         <div class="textoMinhaHistoria">
-            
-        
+
+            <h1>Minha História</h1>
+
+            <p class="titulo">Olá meu nome é Hugo :D</p>
+
+            <p class="texto">
+                Nasci em Curitiba, mas vivi sempre em Araucária. Cresci sempre
+                gostando de praticar diversos esportes, como futebol, e fui
+                bicampeão de capoeira. Sendo uma criança muito hiperativa e
+                curiosa, sempre gostei de ver pessoas conversando e sorrindo.
+
+                Admiro muito meu irmão. Viemos de uma família mais humilde e
+                estudamos em escola pública. Com 14 anos, ele conseguiu passar na
+                UFPR para cursar o técnico de petróleo e gás. A partir disso,
+                nossa vida mudou: ele se distanciou de mim no ensino médio,
+                porém sempre esteve me incentivando a estudar cada vez mais.
+            </p>
+
         </div>
+
         <div class="imagemMinhaHistoria">
-            <img src="../img/quemSouEu.png" alt="Imagem de quem sou eu">
+            <img src="../img/capoeira.png" alt="Imagem de quem sou eu">
         </div>
+    </section>
+
+    <div class="linha"></div>
+
+    <section class="hobbies">
+
+        <div class="carousel">
+
+            <div class="imagemCarousel">
+                <img 
+                    id="imagemAtual"
+                    src="../img/viagem.png"
+                    alt="Hobbies e sonhos"
+                >
+            </div>
+
+            <div class="controlesCarousel">
+
+                <button class="btnCarousel" id="anterior">
+                    &lt;
+                </button>
+
+                <div class="indicadores" id="indicadores"></div>
+
+                <button class="btnCarousel" id="proximo">
+                    &gt;
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="textoHobbies">
+
+            <h2>Hobbies e Sonhos</h2>
+
+            <p>
+                Sempre fui muito curioso e tive diversos hobbies, como desenhar,
+                pintar, fazer bordado, praticar esportes e jogos online. Hoje em
+                dia, gosto muito de cozinhar e aprender receitas novas.
+            </p>
+
+            <p>
+                Meu sonho quando era criança era visitar o Brasil inteiro e
+                observar o quanto nosso país é bonito. Fiz minha primeira viagem
+                em 2025 e consegui conhecer as Cataratas do Iguaçu.
+            </p>
+
+        </div>
+
     </section>
 
 </body>
