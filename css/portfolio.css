@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #27292c;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   PORTFÓLIO
+========================= */
+
+.portfolio {
+    min-height: 100vh;
+    padding: 20px 0 30px;
+    overflow: hidden;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.titulo-container {
+    position: relative;
+    width: calc(100% - 16px);
+    height: 67px;
+    margin: 0 auto 34px;
+
+    border: 1px solid #16484d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-container h1 {
+    color: #29b9c3;
+    font-size: 32px;
+}
+
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+
+.botao-voltar {
+    position: absolute;
+    left: 20px;
+
+    color: #29b9c3;
+    text-decoration: none;
+
+    border: 1px solid #29b9c3;
+    border-radius: 20px;
+
+    padding: 8px 15px;
+
+    transition: .3s;
+}
+
+.botao-voltar:hover {
+    background: #29b9c3;
+    color: #27292c;
+}
+
+
+/* =========================
+   CARROSSEL
+========================= */
+
+.carousel-container {
+    position: relative;
+
+    width: 720px;
+    max-width: calc(100% - 100px);
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Área que mostra apenas um projeto */
+
+.carousel-window {
+    width: 600px;
+    overflow: hidden;
+}
+
+
+/* Projetos lado a lado */
+
+.carousel {
+    display: flex;
+    gap: 24px;
+
+    width: max-content;
+
+    transition: transform .7s cubic-bezier(.22, .61, .36, 1);
+}
+
+
+/* =========================
+   PROJETOS
+========================= */
+
+.projeto {
+    position: relative;
+
+    width: 600px;
+    min-width: 600px;
+    height: 420px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    opacity: .35;
+    transform: scale(.9);
+
+    transition: .7s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto.ativo {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* =========================
+   TÍTULO DOS PROJETOS
+========================= */
+
+.titulo-projeto {
+    height: 42px;
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 20px;
+
+    border-radius: 20px;
+}
+
+.titulo-projeto h2 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+}
+
+
+/* =========================
+   ACCESSFLOW
+========================= */
+
+.accessflow {
+    background: #363636;
+}
+
+.accessflow .titulo-projeto {
+    background: linear-gradient(
+        90deg,
+        #dca4ff,
+        #b014d0
+    );
+}
+
+.accessflow .titulo-projeto h2 {
+    color: #8000a8;
+}
+
+
+/* =========================
+   CONTEÚDO DOS PROJETOS
+========================= */
+
+.projeto-conteudo {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    padding: 16px 18px 10px;
+}
+
+
+/* =========================
+   IMAGENS
+========================= */
+
+.projeto-imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projeto-imagens img {
+    width: 100%;
+    height: 125px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.projeto-descricao {
+    background: #202226;
+
+    border-radius: 15px;
+
+    padding: 22px 14px;
+
+    overflow-y: auto;
+}
+
+.projeto-descricao h3,
+.eliptic-descricao h3 {
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.projeto-descricao span,
+.eliptic-descricao span {
+    color: #dda4ff;
+
+    border: 1px solid currentColor;
+    border-radius: 8px;
+
+    padding: 2px 5px;
+    margin-left: 3px;
+}
+
+.projeto-descricao p,
+.eliptic-descricao p {
+    font-size: 11px;
+    line-height: 1.35;
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================
+   BOTÃO GIT
+========================= */
+
+.botao-git {
+    width: 100%;
+    height: 45px;
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #a900d4,
+        #e4e4e4
+    );
+
+    color: #000;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.botao-git:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+
+/* =====================================================
+   ELLIPTIC
+===================================================== */
+
+.eliptic {
+
+    --cor-fundo: #d4edef;
+    --cor-titulo-1: #46acb4;
+    --cor-titulo-2: #6db0b6;
+    --cor-texto: #59898c;
+    --cor-tecnologia: #2cb8bc;
+    --cor-botao: #46acb4;
+
+    background: var(--cor-fundo);
+
+    height: 420px;
+}
+
+
+/* TÍTULO */
+
+.eliptic .titulo-projeto {
+    position: relative;
+
+    z-index: 3;
+
+    background: linear-gradient(
+        60deg,
+        var(--cor-titulo-1),
+        var(--cor-titulo-2)
+    );
+}
+
+.eliptic .titulo-projeto h2 {
+    color: #000;
+}
+
+
+/* =========================
+   CONTEÚDO ELLIPTIC
+========================= */
+
+.el-conteudo {
+    position: relative;
+
+    flex: 1;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.el-img {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 65%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: .85;
+
+    mask-image: linear-gradient(
+        to right,
+        black 40%,
+        transparent
+    );
+}
+
+
+/* =========================
+   TEXTO ELLIPTIC
+========================= */
+
+.eliptic-descricao {
+    position: absolute;
+
+    z-index: 2;
+
+    right: 15px;
+    top: 15px;
+
+    width: 52%;
+    height: calc(100% - 30px);
+
+    padding: 17px 14px;
+
+    background: var(--cor-texto);
+
+    color: white;
+
+    border-radius: 15px;
+
+}
+
+
+/* TECNOLOGIAS */
+
+.eliptic-descricao span {
+    background: #282a2e;
+
+    color: white;
+
+    border-color: var(--cor-tecnologia);
+}
+
+
+/* =========================
+   BOTÃO GIT DO ELLIPTIC
+========================= */
+
+.eliptic .botao-git {
+    background: linear-gradient(
+        90deg,
+        var(--cor-botao),
+        #d9d9d9
+    );
+}
+
+
+/* =========================
+   BOTÕES LATERAIS
+========================= */
+
+.carousel-btn {
+    position: absolute;
+
+    top: 50%;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #eee;
+
+    color: #31aeb6;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transform: translateY(-50%);
+
+    transition: .3s;
+}
+
+.carousel-btn:hover {
+    transform: translateY(-50%) scale(1.15);
+    background: white;
+}
+
+.anterior {
+    left: -60px;
+}
+
+.proximo {
+    right: -60px;
+}
+
+
+/* =========================
+   INDICADORES
+========================= */
+
+.indicadores {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 22px;
+}
+
+.indicador {
+    width: 21px;
+    height: 3px;
+
+    border: none;
+
+    background: #d7d7d7;
+
+    cursor: pointer;
+}
+
+.indicador.ativo {
+    background: #29b9c3;
+}
+
+
+/* =========================
+   SCROLL ELLIPTIC
+========================= */
+
+.eliptic-descricao::-webkit-scrollbar {
+    width: 4px;
+}
+
+.eliptic-descricao::-webkit-scrollbar-thumb {
+    background: var(--cor-tecnologia);
+    border-radius: 10px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .titulo-container {
+        height: 90px;
+    }
+
+    .titulo-container h1 {
+        font-size: 27px;
+    }
+
+    .botao-voltar {
+        left: 10px;
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+
+    /* CARROSSEL */
+
+    .carousel-container {
+        width: calc(100% - 70px);
+        max-width: none;
+    }
+
+    .carousel-window {
+        width: 100%;
+    }
+
+
+    /* PROJETOS */
+
+    .projeto {
+        width: calc(100vw - 70px);
+        min-width: calc(100vw - 70px);
+        height: 500px;
+    }
+
+
+    /* BOTÕES */
+
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 22px;
+    }
+
+    .anterior {
+        left: -38px;
+    }
+
+    .proximo {
+        right: -38px;
+    }
+
+
+    /* CONTEÚDO */
+
+    .projeto-conteudo {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .projeto-imagens {
+        flex-direction: row;
+    }
+
+    .projeto-imagens img {
+        height: 100px;
+    }
+
+
+    /* ELLIPTIC */
+
+    .eliptic {
+        height: 500px;
+    }
+
+    .el-conteudo {
+        height: auto;
+    }
+
+    .el-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .eliptic-descricao {
+        top: 100px;
+
+        width: calc(100% - 30px);
+
+        height: 270px;
+    }
+}

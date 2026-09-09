@@ -1,13 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portigolío</title>
+
+    <title>Portfólio</title>
+
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <script src="../js/portifolio.js" defer></script>
+
 </head>
+
 <body>
-    <head>
-        Portifólio
-    </head>
+
+<main>
+
+<section class="portfolio">
+
+    <!-- CABEÇALHO -->
+
+    <header class="titulo-container">
+
+        <a href="../index.html" class="botao-voltar">
+            ← Voltar para início
+        </a>
+
+        <h1>Portifólio</h1>
+
+    </header>
+
+
+    <!-- CARROSSEL -->
+
+    <div class="carousel-container">
+
+        <button
+            class="carousel-btn anterior"
+            id="anterior"
+            aria-label="Projeto anterior">
+            ‹
+        </button>
+
+
+        <div class="carousel-window">
+
+            <div class="carousel" id="carousel">
+
+
+                <!-- =========================
+                        ACCESSFLOW
+                ========================== -->
+
+                <article class="projeto accessflow">
+
+                    <div class="titulo-projeto">
+                        <h2>Accessflow</h2>
+                    </div>
+
+                    <div class="projeto-conteudo">
+
+                        <div class="projeto-imagens">
+
+                            <img
+                                src="../img/accessflow.png"
+                                alt="Tela do Accessflow">
+
+                            <img
+                                src="../img/premiacao.png"
+                                alt="Equipe do Accessflow">
+
+                        </div>
+
+
+                        <div class="projeto-descricao">
+
+                            <h3>
+                                Tecnologia:
+                                <span>React</span>
+                                <span>Node</span>
+                                <span>Prisma</span>
+                            </h3>
+
+                            <p>
+                                Projeto voltado para pessoas com
+                                neurodivergência, permitindo a
+                                personalização de páginas no navegador
+                                Chrome de acordo com suas necessidades.
+                            </p>
+
+                            <p>
+                                Fui responsável pelo banco de dados,
+                                integração e desenvolvimento do backend.
+                                Nesse projeto desenvolvi minhas
+                                habilidades com Node.js e aprendi a
+                                utilizar o Prisma.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="https://github.com/Kaio-333/accessflow"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-git">
+                        Ir para o Git
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     ELLIPTIC
+                ========================== -->
+
+                <article class="projeto eliptic">
+
+                    <div class="titulo-projeto">
+                        <h2>ELLIPTIC APP</h2>
+                    </div>
+
+
+                    <div class="el-conteudo">
+
+                        <img
+                            src="../img/grafo.jpg"
+                            alt="Grafo do projeto Elliptic"
+                            class="el-img">
+
+
+                        <div class="eliptic-descricao">
+
+                            <h3>
+                                Tecnologia:
+                                <span>Java</span>
+                                <span>Grafo</span>
+                                <span>Dados</span>
+                            </h3>
+
+                            <p>
+                                Neste projeto, desenvolvemos uma
+                                aplicação utilizando estruturas de
+                                dados em grafos, tendo como base o
+                                conjunto de dados de transações de
+                                Bitcoin da Elliptic.
+                            </p>
+
+                            <p>
+                                O objetivo foi analisar as relações
+                                entre as contas e transações para
+                                auxiliar na identificação e previsão
+                                de atividades potencialmente
+                                maliciosas.
+                            </p>
+
+                            <p>
+                                Durante o desenvolvimento, aperfeiçoei
+                                minhas habilidades de programação e
+                                documentação em Java, além de
+                                aprofundar meus conhecimentos em
+                                estruturas de dados e algoritmos.
+                            </p>
+
+                            <p>
+                                Também trabalhei na otimização da
+                                aplicação para lidar de forma mais
+                                eficiente com grandes volumes de dados.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/hugoffs/Projeto-Colaborativo-2"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-git">
+                        Ir para o Git
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                    PROJETO 3
+                ========================== -->
+
+                <article class="projeto projeto3">
+
+                    <div class="titulo-projeto">
+                        <h2>Projeto 3</h2>
+                    </div>
+
+                    <div class="projeto-conteudo">
+
+                        <div class="projeto-imagens">
+
+                            <img
+                                src="../img/projeto3-1.png"
+                                alt="Projeto 3">
+
+                            <img
+                                src="../img/projeto3-2.png"
+                                alt="Projeto 3">
+
+                        </div>
+
+
+                        <div class="projeto-descricao">
+
+                            <h3>
+                                Tecnologia:
+                                <span>Python</span>
+                                <span>Flask</span>
+                            </h3>
+
+                            <p>
+                                Descrição do projeto.
+                            </p>
+
+                            <p>
+                                Informações sobre o desenvolvimento
+                                e sua participação.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://github.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-git">
+                        Ir para o Git
+                    </a>
+
+                </article>
+
+
+
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="carousel-btn proximo"
+            id="proximo"
+            aria-label="Próximo projeto">
+            ›
+        </button>
+
+    </div>
+
+
+    <!-- INDICADORES -->
+
+    <div class="indicadores" id="indicadores">
+
+        <button class="indicador ativo"></button>
+        <button class="indicador"></button>
+        <button class="indicador"></button>
+        <button class="indicador"></button>
+        <button class="indicador"></button>
+        <button class="indicador"></button>
+        <button class="indicador"></button>
+        <button class="indicador"></button>
+        <button class="indicador"></button>
+
+    </div>
+
+</section>
+
+</main>
+
 </body>
 </html>
