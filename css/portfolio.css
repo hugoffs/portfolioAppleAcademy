@@ -78,8 +78,8 @@ body {
 .carousel-container {
     position: relative;
 
-    width: 720px;
-    max-width: calc(100% - 100px);
+    width: 1100px;
+    max-width: calc(100% - 160px);
 
     margin: auto;
 
@@ -92,7 +92,8 @@ body {
 /* Área que mostra apenas um projeto */
 
 .carousel-window {
-    width: 600px;
+    width: 960px;
+    max-width: 100%;
     overflow: hidden;
 }
 
@@ -116,9 +117,9 @@ body {
 .projeto {
     position: relative;
 
-    width: 600px;
-    min-width: 600px;
-    height: 420px;
+    width: 960px;
+    min-width: 960px;
+    height: clamp(560px, 75vh, 780px);
 
     border-radius: 15px;
     overflow: hidden;
@@ -143,20 +144,20 @@ body {
 ========================= */
 
 .titulo-projeto {
-    height: 42px;
-    min-height: 42px;
+    height: 52px;
+    min-height: 52px;
 
     display: flex;
     align-items: center;
 
-    padding-left: 20px;
+    padding-left: 24px;
 
     border-radius: 20px;
 }
 
 .titulo-projeto h2 {
     font-family: Georgia, serif;
-    font-size: 27px;
+    font-size: 32px;
 }
 
 
@@ -187,13 +188,14 @@ body {
 
 .projeto-conteudo {
     flex: 1;
+    min-height: 0;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    gap: 35px;
+    gap: 40px;
 
-    padding: 16px 18px 10px;
+    padding: 22px 26px 16px;
 }
 
 
@@ -205,11 +207,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    min-height: 0;
 }
 
 .projeto-imagens img {
     width: 100%;
-    height: 125px;
+    flex: 1;
+    min-height: 0;
 
     object-fit: cover;
 
@@ -224,17 +229,19 @@ body {
 .projeto-descricao {
     background: #202226;
 
+    min-height: 0;
+
     border-radius: 15px;
 
-    padding: 22px 14px;
+    padding: 26px 22px;
 
     overflow-y: auto;
 }
 
 .projeto-descricao h3,
 .eliptic-descricao h3 {
-    font-size: 13px;
-    margin-bottom: 18px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .projeto-descricao span,
@@ -244,16 +251,16 @@ body {
     border: 1px solid currentColor;
     border-radius: 8px;
 
-    padding: 2px 5px;
-    margin-left: 3px;
+    padding: 3px 7px;
+    margin-left: 4px;
 }
 
 .projeto-descricao p,
 .eliptic-descricao p {
-    font-size: 11px;
-    line-height: 1.35;
+    font-size: 14px;
+    line-height: 1.5;
 
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 
@@ -263,13 +270,13 @@ body {
 
 .botao-git {
     width: 100%;
-    height: 45px;
-    min-height: 45px;
+    height: 54px;
+    min-height: 54px;
 
     display: flex;
     align-items: center;
 
-    padding-left: 12px;
+    padding-left: 16px;
 
     background: linear-gradient(
         90deg,
@@ -279,7 +286,7 @@ body {
 
     color: #000;
 
-    font-size: 25px;
+    font-size: 27px;
     font-weight: bold;
 
     text-decoration: none;
@@ -310,7 +317,7 @@ body {
 
     background: var(--cor-fundo);
 
-    height: 420px;
+    height: clamp(560px, 75vh, 780px);
 }
 
 
@@ -386,13 +393,15 @@ body {
     width: 52%;
     height: calc(100% - 30px);
 
-    padding: 17px 14px;
+    padding: 20px 18px;
 
     background: var(--cor-texto);
 
     color: white;
 
     border-radius: 15px;
+
+    overflow-y: auto;
 
 }
 
@@ -430,8 +439,8 @@ body {
 
     top: 50%;
 
-    width: 38px;
-    height: 38px;
+    width: 46px;
+    height: 46px;
 
     border: none;
     border-radius: 50%;
@@ -440,7 +449,7 @@ body {
 
     color: #31aeb6;
 
-    font-size: 28px;
+    font-size: 32px;
 
     cursor: pointer;
 
@@ -457,11 +466,11 @@ body {
 }
 
 .anterior {
-    left: -60px;
+    left: -72px;
 }
 
 .proximo {
-    right: -60px;
+    right: -72px;
 }
 
 
@@ -480,8 +489,8 @@ body {
 }
 
 .indicador {
-    width: 21px;
-    height: 3px;
+    width: 26px;
+    height: 4px;
 
     border: none;
 
@@ -533,7 +542,7 @@ body {
     /* CARROSSEL */
 
     .carousel-container {
-        width: calc(100% - 70px);
+        width: calc(100% - 80px);
         max-width: none;
     }
 
@@ -545,26 +554,26 @@ body {
     /* PROJETOS */
 
     .projeto {
-        width: calc(100vw - 70px);
-        min-width: calc(100vw - 70px);
-        height: 500px;
+        width: calc(100vw - 80px);
+        min-width: calc(100vw - 80px);
+        height: clamp(600px, 82vh, 740px);
     }
 
 
     /* BOTÕES */
 
     .carousel-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 22px;
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
     }
 
     .anterior {
-        left: -38px;
+        left: -48px;
     }
 
     .proximo {
-        right: -38px;
+        right: -48px;
     }
 
 
@@ -572,7 +581,7 @@ body {
 
     .projeto-conteudo {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 18px;
     }
 
     .projeto-imagens {
@@ -580,14 +589,14 @@ body {
     }
 
     .projeto-imagens img {
-        height: 100px;
+        height: 140px;
     }
 
 
     /* ELLIPTIC */
 
     .eliptic {
-        height: 500px;
+        height: clamp(600px, 82vh, 740px);
     }
 
     .el-conteudo {
@@ -596,14 +605,14 @@ body {
 
     .el-img {
         width: 100%;
-        height: 200px;
+        height: 260px;
     }
 
     .eliptic-descricao {
-        top: 100px;
+        top: 110px;
 
         width: calc(100% - 30px);
 
-        height: 270px;
+        height: 400px;
     }
 }
