@@ -10,19 +10,27 @@ const imagens = [
     "../img/cinuca.png"
 ];
 
+// Descrição de cada imagem, na mesma ordem do array acima.
+// Usada no "alt" para quem usa leitor de tela conseguir
+// acompanhar a troca de foto no carrossel.
+const descricoesImagens = [
+    "Passeio de barco nas Cataratas do Iguaçu",
+    "Bordado com o nome Hugo e escudo de time de futebol",
+    "Bandeja de salgados fritos preparados em casa",
+    "Preparando churrasco na churrasqueira",
+    "Momento de carinho com um cachorro no parque",
+    "Treino de musculação na academia",
+    "Uniforme da escolinha de futebol",
+    "Jogando no console de videogame",
+    "Partida de sinuca com um amigo"
+];
+
 let imagemAtual = 0;
 
 const imagem = document.getElementById("imagemAtual");
 const indicadores = document.getElementById("indicadores");
 const anterior = document.getElementById("anterior");
 const proximo = document.getElementById("proximo");
-
-
-// Verifica se encontrou os elementos
-console.log("Imagem:", imagem);
-console.log("Indicadores:", indicadores);
-console.log("Anterior:", anterior);
-console.log("Próximo:", proximo);
 
 
 // =========================
@@ -35,6 +43,15 @@ imagens.forEach((_, index) => {
 
     indicador.classList.add("indicador");
 
+    // Acessibilidade: dá pra navegar pelos indicadores com Tab
+    // e ativá-los com Enter ou Espaço, não só com o mouse.
+    indicador.setAttribute("role", "button");
+    indicador.setAttribute("tabindex", "0");
+    indicador.setAttribute(
+        "aria-label",
+        `Ver imagem ${index + 1}: ${descricoesImagens[index]}`
+    );
+
     if (index === 0) {
         indicador.classList.add("ativo");
     }
@@ -44,6 +61,20 @@ imagens.forEach((_, index) => {
         imagemAtual = index;
 
         atualizarCarousel();
+
+    });
+
+    indicador.addEventListener("keydown", function (evento) {
+
+        if (evento.key === "Enter" || evento.key === " ") {
+
+            evento.preventDefault();
+
+            imagemAtual = index;
+
+            atualizarCarousel();
+
+        }
 
     });
 
@@ -58,6 +89,7 @@ imagens.forEach((_, index) => {
 function atualizarCarousel() {
 
     imagem.src = imagens[imagemAtual];
+    imagem.alt = descricoesImagens[imagemAtual];
 
     const todosIndicadores =
         document.querySelectorAll(".indicador");

@@ -27,12 +27,27 @@ cards.forEach(card => {
     // Quantos segundos do trecho serão tocados
     const duracao = parseFloat(audio.dataset.duracao) || 15;
 
+    // Acessibilidade: os cards eram <div>, então não davam pra
+    // alcançar com Tab nem ativar com o teclado. Agora funcionam
+    // como um botão de verdade.
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
+
+    if (!card.hasAttribute("aria-label")) {
+        const nomeMusica = card.querySelector("p")?.textContent.trim();
+        card.setAttribute(
+            "aria-label",
+            `Tocar trecho de ${nomeMusica || "música"}`
+        );
+    }
+
 
     // =========================
-    // MOUSE ENTROU
+    // TOCAR O TRECHO DE DESTAQUE
+    // (usado no hover do mouse e ao focar via teclado)
     // =========================
 
-    card.addEventListener("mouseenter", () => {
+    function tocarTrecho() {
 
         // Para a música anterior
         if (musicaTocando && musicaTocando !== audio) {
@@ -47,11 +62,8 @@ cards.forEach(card => {
 
         // Começa a tocar
         audio.play().catch(() => {
-
-            console.log(
-                "O navegador bloqueou o autoplay. Clique no card para tocar."
-            );
-
+            // Navegador bloqueou o autoplay; o usuário ainda
+            // pode ativar clicando ou apertando Enter/Espaço no card.
         });
 
         // Depois de "duracao" segundos, para sozinho
@@ -60,14 +72,14 @@ cards.forEach(card => {
             pararMusica(audio);
         }, duracao * 1000);
 
-    });
+    }
 
 
     // =========================
-    // MOUSE SAIU
+    // PARAR AO SAIR (mouse ou foco)
     // =========================
 
-    card.addEventListener("mouseleave", () => {
+    function sairDoTrecho() {
 
         clearTimeout(timeoutTrecho);
 
@@ -77,14 +89,15 @@ cards.forEach(card => {
             musicaTocando = null;
         }
 
-    });
+    }
 
 
     // =========================
-    // CLIQUE
+    // ALTERNAR PLAY/PAUSE
+    // (usado no clique do mouse e no Enter/Espaço do teclado)
     // =========================
 
-    card.addEventListener("click", () => {
+    function alternarPlay() {
 
         if (audio.paused) {
 
@@ -110,6 +123,27 @@ cards.forEach(card => {
 
             clearTimeout(timeoutTrecho);
             audio.pause();
+
+        }
+
+    }
+
+
+    // Mouse
+    card.addEventListener("mouseenter", tocarTrecho);
+    card.addEventListener("mouseleave", sairDoTrecho);
+    card.addEventListener("click", alternarPlay);
+
+    // Teclado (Tab para focar, Enter/Espaço para tocar/pausar)
+    card.addEventListener("focus", tocarTrecho);
+    card.addEventListener("blur", sairDoTrecho);
+
+    card.addEventListener("keydown", evento => {
+
+        if (evento.key === "Enter" || evento.key === " ") {
+
+            evento.preventDefault();
+            alternarPlay();
 
         }
 

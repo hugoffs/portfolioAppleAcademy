@@ -118,7 +118,7 @@ header {
    BOTÃO VOLTAR
 ========================= */
 
-.btnVoltar {
+header .btnVoltar {
     padding: 10px 20px;
 
     background-color: transparent;
@@ -135,7 +135,7 @@ header {
 }
 
 
-.btnVoltar:hover {
+header .btnVoltar:hover {
 
     box-shadow:
         0 0 15px rgba(44, 184, 188, 0.4);
@@ -742,8 +742,7 @@ header {
 
 
 .imagemIngressao img {
-    height: 353px;
-    width: 589px;
+    width: 100%;
 
     max-width: 450px;
 
@@ -933,7 +932,7 @@ header {
         font-size: 14px;
     }
 
-    .btnVoltar {
+    header .btnVoltar {
         padding: 8px 14px;
 
         font-size: 14px;
@@ -993,38 +992,11 @@ header {
 }
 
 
-/* =========================
-   BOTÃO
-========================= */
-
-.btnVoltar {
-    padding: 10px 18px;
-
-    background-color: #101116;
-
-    color: #E53935;
-
-    border: 1px solid #000;
-
-    border-radius: 25px;
-
-    font-family: Ubuntu, sans-serif;
-
-    font-size: 13px;
-
-    text-decoration: none;
-
-    transition: 0.3s;
-}
-
-
-/* Efeito ao passar o mouse */
-
-.btnVoltar:hover {
-    background-color: #000;
-
-    transform: scale(1.05);
-}
+/* O estilo do botão "Voltar" do rodapé vem de .btnVoltar,
+   já definido em transicao.css (fundo escuro, texto vermelho).
+   O botão do cabeçalho usa a regra "header .btnVoltar" (acima
+   nesse arquivo), que é mais específica e por isso não é
+   afetada por essa regra do rodapé. */
 
 
 /* =========================
@@ -1071,7 +1043,7 @@ header {
     }
 
 
-    .btnVoltar {
+    header .btnVoltar {
         font-size: 14px;
 
         padding: 8px 16px;
