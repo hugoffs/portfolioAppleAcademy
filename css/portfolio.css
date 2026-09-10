@@ -1,3 +1,4 @@
+
 /* =====================================================
    GERAL
 ===================================================== */
@@ -25,9 +26,7 @@ body {
     width: calc(100% - 16px);
     height: 67px;
     margin: 0 auto 34px;
-
     border: 1px solid #16484d;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,21 +40,18 @@ body {
 .botao-voltar {
     position: absolute;
     left: 20px;
-
-    color: #29b9c3;
     text-decoration: none;
-
-    border: 1px solid #29b9c3;
+    background: #101116;
+    color: #E53935;
+    border: 1px solid #000;
     border-radius: 20px;
-
     padding: 8px 15px;
-
     transition: .3s;
 }
 
 .botao-voltar:hover {
-    background: #29b9c3;
-    color: #27292c;
+    background: #000;
+    transform: scale(1.05);
 }
 
 
@@ -65,12 +61,9 @@ body {
 
 .carousel-container {
     position: relative;
-
     width: 1100px;
     max-width: calc(100% - 160px);
-
     margin: auto;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,41 +72,43 @@ body {
 .carousel-window {
     width: 960px;
     max-width: 100%;
-
     overflow: hidden;
 }
 
 .carousel {
     display: flex;
     gap: 24px;
-
     width: max-content;
-
     transition: transform .7s cubic-bezier(.22, .61, .36, 1);
-}
-
-.carousel-btn {
+}.carousel-btn {
     position: absolute;
-
     top: 50%;
-
     width: 46px;
     height: 46px;
-
+    padding: 0;
+    margin: 0;
     border: none;
     border-radius: 50%;
-
-    background: #eee;
-    color: #31aeb6;
-
-    font-size: 32px;
-
+    background: #fff;
+    color: #006d73;
     cursor: pointer;
     z-index: 20;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transform: translateY(-50%);
+    transition: transform 0.3s, background 0.3s;
+}
 
-    transition: .3s;
+.carousel-btn span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 28px;
 }
 
 .carousel-btn:hover {
@@ -121,14 +116,9 @@ body {
     background: white;
 }
 
-.anterior {
-    left: -72px;
-}
+.anterior {left: -72px;}
 
-.proximo {
-    right: -72px;
-}
-
+.proximo {right: -72px;}
 
 /* =====================================================
    INDICADORES
@@ -137,7 +127,6 @@ body {
 .indicadores {
     display: flex;
     justify-content: center;
-
     gap: 6px;
     margin-top: 22px;
 }
@@ -145,11 +134,8 @@ body {
 .indicador {
     width: 26px;
     height: 4px;
-
-    border: none;
-
+    border: 0;
     background: #d7d7d7;
-
     cursor: pointer;
 }
 
@@ -159,26 +145,19 @@ body {
 
 
 /* =====================================================
-   PROJETO BASE
+   ESTRUTURA GERAL DOS PROJETOS
 ===================================================== */
 
 .projeto {
     position: relative;
-
     width: 960px;
     min-width: 960px;
-
     height: clamp(560px, 75vh, 780px);
-
     border-radius: 15px;
-
     overflow: hidden;
-
     opacity: .35;
     transform: scale(.9);
-
     transition: .7s;
-
     display: flex;
     flex-direction: column;
 }
@@ -188,20 +167,12 @@ body {
     transform: scale(1);
 }
 
-
-/* =====================================================
-   TÍTULO DOS PROJETOS
-===================================================== */
-
 .titulo-projeto {
     height: 52px;
     min-height: 52px;
-
     display: flex;
     align-items: center;
-
     padding-left: 24px;
-
     border-radius: 20px;
 }
 
@@ -210,49 +181,29 @@ body {
     font-size: 32px;
 }
 
-
-/* =====================================================
-   CONTEÚDO PADRÃO
-===================================================== */
-
 .projeto-conteudo {
-    font-family: Ubuntu, Arial, sans-serif;
-
     flex: 1;
     min-height: 0;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     gap: 40px;
-
     padding: 22px 26px 16px;
+    font-family: Ubuntu, Arial, sans-serif;
 }
-
-
-/* =====================================================
-   IMAGENS PADRÃO
-===================================================== */
 
 .projeto-imagens {
     display: flex;
     flex-direction: column;
-
     gap: 20px;
-
     min-height: 0;
 }
 
 .projeto-imagens img {
     width: 100%;
-
     flex: 1;
     min-height: 0;
-
     object-fit: cover;
-
     border-radius: 12px;
-
     transition: .5s;
 }
 
@@ -260,43 +211,28 @@ body {
     transform: scale(1.025);
 }
 
-
-/* =====================================================
-   DESCRIÇÃO PADRÃO
-===================================================== */
-
 .projeto-descricao {
     background: #202226;
-
     min-height: 0;
-
     border-radius: 15px;
-
     padding: 26px 22px;
-
     overflow-y: auto;
 }
 
 .projeto-descricao h3,
 .eliptic-descricao h3 {
     display: flex;
-
     align-items: center;
     flex-wrap: wrap;
-
     gap: 8px;
-
     margin-bottom: 20px;
-
     font-size: 16px;
 }
 
 .projeto-descricao p,
 .eliptic-descricao p {
     font-size: 14px;
-
     line-height: 1.5;
-
     margin-bottom: 18px;
 }
 
@@ -312,27 +248,14 @@ body {
 .projeto-descricao span,
 .eliptic-descricao span {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
-
     color: var(--cor-tecnologia, #dda4ff);
-
     border: 1px solid currentColor;
-
     border-radius: 8px;
-
     padding: 3px 7px;
-
     margin-left: 4px;
-
-    transition:
-        color .5s ease,
-        border-color .5s ease,
-        background .5s ease,
-        box-shadow .5s ease,
-        transform .3s ease;
-
+    transition: .5s;
     animation: mudarCorTecnologia 3s ease-in-out infinite;
 }
 
@@ -357,8 +280,7 @@ body {
 }
 
 @keyframes mudarCorTecnologia {
-    0%,
-    100% {
+    0%, 100% {
         filter: brightness(1);
         box-shadow: 0 0 0 transparent;
     }
@@ -372,9 +294,7 @@ body {
 .projeto-descricao span:hover,
 .eliptic-descricao span:hover {
     animation-play-state: paused;
-
     transform: translateY(-2px) scale(1.05);
-
     filter: brightness(1.3);
 }
 
@@ -385,61 +305,42 @@ body {
 
 .botao-git {
     width: 100%;
-
     height: 54px;
     min-height: 54px;
-
     display: flex;
     align-items: center;
-
     padding-left: 16px;
-
-    background: linear-gradient(
-        90deg,
-        var(--cor-botao, #a900d4),
-        #d9d9d9
-    );
-
+    background: linear-gradient(90deg, var(--cor-botao, #a900d4), #d9d9d9);
     color: #000;
-
     font-size: 27px;
     font-weight: bold;
-
     text-decoration: none;
-
     border-radius: 10px;
-
     transition: .3s;
 }
 
 .botao-git:hover {
     transform: scale(1.02);
-
     filter: brightness(1.1);
 }
 
 
 /* =====================================================
-   ACCESSFLOW
+   CORES DOS PROJETOS
 ===================================================== */
 
 .accessflow {
     --cor-tecnologia: #dda4ff;
     --cor-botao: #a900d4;
-
     background: #363636;
 }
 
 .accessflow .titulo-projeto {
-    background: linear-gradient(
-        90deg,
-        #dca4ff,
-        #b014d0
-    );
+    background: linear-gradient(90deg, #8a1fa8, #b014d0);
 }
 
 .accessflow .titulo-projeto h2 {
-    color: #8000a8;
+    color: #fff;
 }
 
 
@@ -451,24 +352,16 @@ body {
     --cor-fundo: #d4edef;
     --cor-titulo-1: #46acb4;
     --cor-titulo-2: #6db0b6;
-    --cor-texto: #59898c;
+    --cor-texto: #426e72;
     --cor-tecnologia: #2cb8bc;
     --cor-botao: #46acb4;
-
     background: var(--cor-fundo);
-
-    height: clamp(560px, 75vh, 780px);
 }
 
 .eliptic .titulo-projeto {
     position: relative;
     z-index: 3;
-
-    background: linear-gradient(
-        60deg,
-        var(--cor-titulo-1),
-        var(--cor-titulo-2)
-    );
+    background: linear-gradient(60deg, var(--cor-titulo-1), var(--cor-titulo-2));
 }
 
 .eliptic .titulo-projeto h2 {
@@ -477,68 +370,43 @@ body {
 
 .el-conteudo {
     position: relative;
-
     flex: 1;
-
     overflow: hidden;
 }
 
 .el-img {
     position: absolute;
-
     left: 0;
     top: 0;
-
     width: 65%;
     height: 100%;
-
     object-fit: cover;
-
     opacity: .85;
-
-    mask-image: linear-gradient(
-        to right,
-        black 40%,
-        transparent
-    );
+    mask-image: linear-gradient(to right, black 40%, transparent);
 }
 
 .eliptic-descricao {
     position: absolute;
-
     z-index: 2;
-
     right: 15px;
     top: 15px;
-
     width: 52%;
     height: calc(100% - 30px);
-
     padding: 20px 18px;
-
     background: var(--cor-texto);
-
     color: white;
-
     border-radius: 15px;
-
     overflow-y: auto;
 }
 
 .eliptic-descricao span {
     background: #282a2e;
-
     color: white;
-
     border-color: var(--cor-tecnologia);
 }
 
 .eliptic .botao-git {
-    background: linear-gradient(
-        90deg,
-        var(--cor-botao),
-        #d9d9d9
-    );
+    background: linear-gradient(90deg, var(--cor-botao), #d9d9d9);
 }
 
 
@@ -553,104 +421,70 @@ body {
     --cor-texto: #6e413f;
     --cor-tecnologia: #7d1017;
     --cor-botao: #ffbfbd;
-
     position: relative;
-
     background: var(--cor-fundo);
-
-    height: clamp(560px, 75vh, 780px);
-
     overflow: hidden;
 }
 
 .mbolos .titulo-projeto {
     position: relative;
-
     z-index: 5;
-
     background: var(--cor-fundo-titulo);
-
     color: var(--cor-titulo-M);
 }
 
-.mbolos .projeto-conteudo {
+.mbolos .projeto-conteudo,
+.ccg .projeto-conteudo {
     position: relative;
-
     display: block;
-
     width: 100%;
-
     height: calc(100% - 52px);
-
     padding: 0;
-
     overflow: hidden;
 }
 
-.mbolos .projeto-imagens {
+.mbolos .projeto-imagens,
+.ccg .projeto-imagens {
     position: absolute;
-
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     display: block;
-
     z-index: 1;
 }
 
 .mbolos .projeto-imagens img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     border-radius: 0;
-
     opacity: .25;
 }
 
 .mbolos .projeto-descricao {
     position: absolute;
-
     z-index: 3;
-
     right: 24px;
     top: 20px;
-
     width: 48%;
     height: calc(100% - 40px);
-
     background: #fad8d6;
-
     color: var(--cor-texto);
-
     padding: 22px;
-
     overflow-y: auto;
-
     backdrop-filter: blur(2px);
 }
 
 .mbolos .projeto-descricao span {
     color: var(--cor-tecnologia);
-
     border-color: var(--cor-tecnologia);
-
     background: rgba(255, 240, 239, .5);
 }
 
 .mbolos .botao-git {
     position: relative;
-
     z-index: 6;
-
-    background: linear-gradient(
-        90deg,
-        var(--cor-botao),
-        #d9d9d9
-    );
+    background: linear-gradient(90deg, var(--cor-botao), #d9d9d9);
 }
 
 
@@ -661,39 +495,29 @@ body {
 .mqtt {
     --cor-titulo-mqtt: #000;
     --cor-fundo-titulo-mqtt: #92d9a6;
-    --cor-tecnologia-texto-mqtt: #159c3b;
+    --cor-tecnologia-texto-mqtt: #1fb84b;
     --cor-fundo-projeto-mqtt: #383838;
     --cor-botoes-tecnologia-fundo-mqtt: #282a2e;
     --cor-botoes-tecnologia-borda-mqtt: #159c3b;
-
     position: relative;
-
     background: var(--cor-fundo-projeto-mqtt);
-
-    height: clamp(560px, 75vh, 780px);
-
     overflow: hidden;
 }
 
 .mqtt .titulo-projeto {
     position: relative;
-
     z-index: 5;
-
-    background-color: var(--cor-fundo-titulo-mqtt);
-
+    background: var(--cor-fundo-titulo-mqtt);
     color: var(--cor-titulo-mqtt);
 }
 
 .mqtt .projeto-conteudo {
-    background-color: var(--cor-fundo-projeto-mqtt);
+    background: var(--cor-fundo-projeto-mqtt);
 }
 
 .mqtt .projeto-descricao span {
     color: var(--cor-tecnologia-texto-mqtt);
-
     border-color: var(--cor-botoes-tecnologia-borda-mqtt);
-
     background: var(--cor-botoes-tecnologia-fundo-mqtt);
 }
 
@@ -708,304 +532,128 @@ body {
 
 /* =====================================================
    PORTFÓLIO PROFISSIONAL
-   CIANO
 ===================================================== */
 
 .portifolio {
     --cyan: #00e5ff;
-    --cyan-bright: #00f2ff;
-    --cyan-dark: #00a9bd;
-
     --fundo-portifolio: #080d10;
     --fundo-descricao-portifolio: #1d2125;
-
     --texto-portifolio: #e4f8fa;
-
     --cor-tecnologia: #00e5ff;
     --cor-botao: #00b8cc;
 
     position: relative;
-
-    /*
-       IMPORTANTE:
-       Não colocar width: 100% aqui.
-       O carrossel trabalha com projetos de 960px.
-    */
     width: 960px;
     min-width: 960px;
-
-    height: clamp(560px, 75vh, 780px);
-
     background: var(--fundo-portifolio);
-
     overflow: hidden;
 }
 
-
-/* =====================================================
-   TÍTULO DO PORTFÓLIO
-===================================================== */
-
 .portifolio .titulo-projeto {
     position: relative;
-
     z-index: 10;
-
-    height: 52px;
-    min-height: 52px;
-
-    display: flex;
-    align-items: center;
-
-    padding-left: 24px;
-
-    background: linear-gradient(
-        90deg,
-        #00b8cc,
-        #00e5ff,
-        #9afaff
-    );
-
+    background: linear-gradient(90deg, #00b8cc, #00e5ff, #9afaff);
     color: #001114;
-
-    border-radius: 20px;
 }
 
 .portifolio .titulo-projeto h2 {
     color: #001114;
-
-    font-family: Georgia, serif;
-
     font-size: 30px;
-
     font-weight: bold;
 }
 
-
-/* =====================================================
-   CONTEÚDO DO PORTFÓLIO
-===================================================== */
-
 .portifolio .projeto-conteudo {
     position: relative;
-
-    display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     align-items: center;
-
-    gap: 40px;
-
-    /*
-       Mantém o mesmo cálculo dos outros projetos.
-    */
     height: calc(100% - 52px);
-
     padding: 22px 26px 70px;
-
     overflow: hidden;
 }
 
-
-/* =====================================================
-   IMAGEM DO PORTFÓLIO
-===================================================== */
-
 .portifolio .projeto-imagens {
-    display: flex;
-
     align-items: center;
     justify-content: center;
-
     width: 100%;
     height: 100%;
-
-    min-height: 0;
-
     padding: 0;
-
     overflow: hidden;
-
     border-radius: 15px;
-
     border: 1px solid rgba(0, 229, 255, .25);
 }
 
 .portifolio .projeto-imagens img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
-    border-radius: 12px;
-
-    transition: .5s;
 }
-
-.portifolio .projeto-imagens:hover img {
-    transform: scale(1.025);
-}
-
-
-/* =====================================================
-   DESCRIÇÃO DO PORTFÓLIO
-===================================================== */
 
 .portifolio .projeto-descricao {
     align-self: center;
-
     width: 100%;
-
     max-width: 500px;
-
     min-height: 300px;
     max-height: 430px;
-
     padding: 28px;
-
     background: var(--fundo-descricao-portifolio);
-
     color: white;
-
-    border-radius: 15px;
-
     border: 1px solid rgba(0, 229, 255, .15);
-
-    overflow-y: auto;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, .35);
-
-    transition: .3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
 }
 
 .portifolio .projeto-descricao:hover {
     border-color: var(--cyan);
-
     box-shadow:
         0 0 20px rgba(0, 229, 255, .12),
         0 10px 30px rgba(0, 0, 0, .35);
 }
 
-
-/* =====================================================
-   TECNOLOGIAS DO PORTFÓLIO
-===================================================== */
-
 .portifolio .projeto-descricao h3 {
-    display: flex;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
     margin-bottom: 25px;
-
-    font-size: 16px;
 }
 
 .portifolio .projeto-descricao span {
     color: var(--cyan);
-
     background: #07181b;
-
     border-color: var(--cyan);
-
     padding: 4px 9px;
-
     margin-left: 3px;
-
     font-size: 13px;
 }
 
 .portifolio .projeto-descricao span:hover {
     background: var(--cyan);
-
     color: #001114;
-
-    box-shadow:
-        0 0 12px rgba(0, 229, 255, .35);
+    box-shadow: 0 0 12px rgba(0, 229, 255, .35);
 }
-
-
-/* =====================================================
-   TEXTO DO PORTFÓLIO
-===================================================== */
 
 .portifolio .projeto-descricao p {
     color: var(--texto-portifolio);
-
     font-size: 14px;
-
     line-height: 1.6;
-
-    margin-bottom: 18px;
 }
 
-.portifolio .projeto-descricao strong {
-    color: #8cf7ff;
-}
-
-
-/* =====================================================
-   BOTÃO DO PORTFÓLIO
-===================================================== */
-
-.portifolio .botao-git {
+.portifolio .botao-git,
+.morse .botao-git,
+.regressao .botao-git {
     position: absolute;
-
     z-index: 20;
-
     left: 0;
     bottom: 0;
-
     width: 100%;
+}
 
-    height: 54px;
-    min-height: 54px;
-
-    display: flex;
-
-    align-items: center;
-
-    padding-left: 20px;
-
-    background: linear-gradient(
-        90deg,
-        #00b8cc,
-        #00e5ff,
-        #b5fbff
-    );
-
+.portifolio .botao-git {
+    background: linear-gradient(90deg, #00b8cc, #00e5ff, #b5fbff);
     color: #001114;
-
-    font-size: 27px;
-
-    font-weight: bold;
-
-    text-decoration: none;
-
-    border-radius: 10px;
-
-    transition: .3s;
+    padding-left: 20px;
 }
 
 .portifolio .botao-git:hover {
-    background: linear-gradient(
-        90deg,
-        #00e5ff,
-        #8cf7ff
-    );
-
+    background: linear-gradient(90deg, #00e5ff, #8cf7ff);
     transform: translateY(-2px);
-
     filter: brightness(1.05);
-
-    box-shadow:
-        0 0 20px rgba(0, 229, 255, .3);
+    box-shadow: 0 0 20px rgba(0, 229, 255, .3);
 }
 
 
@@ -1019,23 +667,15 @@ body {
     --cor-tecnologia-text-ccg: #fbc605;
     --cor-tecnologia-fundo-ccg: #282a2e;
     --cor-texto-ccg: #fff;
-
     position: relative;
-
     background: var(--cor-fundo-ccg);
-
-    height: clamp(560px, 75vh, 780px);
-
     overflow: hidden;
 }
 
 .ccg .titulo-projeto {
     position: relative;
-
     z-index: 10;
-
     background: var(--cor-fundo-ccg);
-
     color: var(--cor-titulo-text-ccg);
 }
 
@@ -1043,272 +683,40 @@ body {
     color: var(--cor-titulo-text-ccg);
 }
 
-.ccg .projeto-conteudo {
-    position: relative;
-
-    display: block;
-
-    width: 100%;
-
-    height: calc(100% - 52px);
-
-    padding: 0;
-
-    overflow: hidden;
-}
-
-.ccg .projeto-imagens {
-    position: absolute;
-
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    z-index: 1;
-}
-
 .ccg .projeto-imagens img {
     position: absolute;
-
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     border-radius: 0;
-
-    opacity: 1;
 }
 
 .ccg .projeto-descricao {
+    margin-top:20%;
     position: absolute;
-
     z-index: 5;
-
     left: 26px;
     top: 30px;
-
     width: 45%;
-
     max-height: calc(100% - 60px);
-
     padding: 22px;
-
     background: #101116;
-
     color: var(--cor-texto-ccg);
-
     border-radius: 15px;
-
     overflow-y: auto;
 }
 
 .ccg .projeto-descricao span {
     background: var(--cor-tecnologia-fundo-ccg);
-
     color: var(--cor-tecnologia-text-ccg);
-
     border-color: var(--cor-tecnologia-text-ccg);
-
-    margin-left: 4px;
 }
 
 .ccg .botao-git {
     position: relative;
-
     z-index: 20;
-
-    background: linear-gradient(
-        90deg,
-        #ddaf04,
-        #d9d9d9
-    );
-}
-
-
-/* =====================================================
-   PREVER MEGA SENA
-===================================================== */
-
-.mega-sena {
-    --cor-fundo-mega: #237d31;
-    --cor-titulo-mega: #329b27;
-    --cor-card-mega: #0d0f14;
-    --cor-tecnologia-mega: #26c6da;
-
-    position: relative;
-
-    background: var(--cor-fundo-mega);
-
-    height: clamp(560px, 75vh, 780px);
-
-    overflow: hidden;
-}
-
-.mega-sena .titulo-projeto {
-    position: relative;
-
-    z-index: 10;
-
-    background: #e4e4e4;
-
-    border-radius: 20px;
-}
-
-.mega-sena .titulo-projeto h2 {
-    color: var(--cor-titulo-mega);
-}
-
-.mega-sena .projeto-conteudo {
-    position: relative;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    align-items: center;
-
-    gap: 30px;
-
-    height: calc(100% - 52px);
-
-    padding: 20px 35px 70px;
-
-    overflow: hidden;
-}
-
-.mega-sena .projeto-imagens {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 100%;
-
-    padding: 0;
-
-    background: transparent;
-}
-
-.mega-sena .projeto-imagens img {
-    display: block;
-
-    width: auto;
-    height: auto;
-
-    max-width: 100%;
-    max-height: 430px;
-
-    object-fit: contain;
-
-    border-radius: 0;
-
-    background: transparent;
-
-    box-shadow: none;
-}
-
-.mega-sena .numero-frame {
-    position: absolute;
-
-    top: 8px;
-    left: 10px;
-
-    color: rgba(255, 255, 255, .55);
-
-    font-size: 13px;
-}
-
-.mega-sena .projeto-descricao {
-    width: 100%;
-
-    max-width: 450px;
-
-    height: 270px;
-
-    justify-self: center;
-
-    padding: 22px;
-
-    background: #0d0f14;
-
-    color: white;
-
-    border-radius: 15px;
-
-    overflow-y: auto;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, .2);
-}
-
-.mega-sena .projeto-descricao h3 {
-    display: flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    margin-bottom: 25px;
-
-    font-size: 15px;
-
-    font-weight: normal;
-}
-
-.mega-sena .projeto-descricao span {
-    margin: 0;
-
-    padding: 3px 8px;
-
-    color: var(--cor-tecnologia-mega);
-
-    border: 1px solid var(--cor-tecnologia-mega);
-
-    border-radius: 7px;
-
-    font-size: 11px;
-}
-
-.mega-sena .projeto-descricao h4 {
-    margin-bottom: 10px;
-
-    font-size: 15px;
-}
-
-.mega-sena .projeto-descricao p {
-    margin-bottom: 14px;
-
-    color: #e5e5e5;
-
-    font-size: 13px;
-
-    line-height: 1.5;
-}
-
-.mega-sena .botao-git {
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
-
-    z-index: 20;
-
-    width: 100%;
-
-    height: 54px;
-
-    background: linear-gradient(
-        90deg,
-        #32a43a,
-        #d9d9d9
-    );
+    background: linear-gradient(90deg, #ddaf04, #d9d9d9);
 }
 
 
@@ -1322,266 +730,139 @@ body {
     --cor-fundo-texto-morse: #e3e3e3;
     --cor-tecnologia-fundo-morse: #282a2e;
     --cor-tecnologia-morse: #fff;
-
     position: relative;
-
     background: var(--cor-fundo-morse);
-
-    height: clamp(560px, 75vh, 780px);
-
     overflow: hidden;
 }
 
 .morse .titulo-morse {
     position: relative;
-
     z-index: 10;
-
-    height: 52px;
-    min-height: 52px;
-
-    display: flex;
-    align-items: center;
-
-    padding-left: 24px;
-
-    background: linear-gradient(
-        90deg,
-        #e3e3e3,
-        #bdbdbd
-    );
-
-    border-radius: 20px;
+    background: linear-gradient(90deg, #e3e3e3, #bdbdbd);
 }
 
 .morse .titulo-morse h2 {
     color: var(--cor-titulo-morse);
-
-    font-family: Georgia, serif;
-
     font-size: 30px;
-
     font-weight: bold;
 }
 
 .morse .projeto-conteudo {
     position: relative;
-
-    display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     align-items: center;
-
     gap: 35px;
-
     height: calc(100% - 52px);
-
     padding: 25px 40px 70px;
-
     overflow: hidden;
 }
 
 .morse .projeto-imagens {
-    display: flex;
-
     align-items: center;
     justify-content: center;
-
     width: 100%;
     height: 100%;
 }
 
 .morse .projeto-imagens img {
     width: 100%;
-
     max-width: 470px;
     max-height: 430px;
-
     object-fit: contain;
-
-    border-radius: 12px;
+    border-radius: 30px;
 }
 
 .morse .projeto-descricao {
     align-self: center;
-
     width: 100%;
-
     max-width: 450px;
-
     min-height: 270px;
     max-height: 350px;
-
     padding: 24px;
-
     background: var(--cor-fundo-texto-morse);
-
     color: #000;
-
     border-radius: 15px;
-
-    overflow-y: auto;
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, .18);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
 }
 
 .morse .projeto-descricao h3 {
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
     margin-bottom: 25px;
-
-    font-size: 15px;
 }
 
 .morse .projeto-descricao span {
     margin-left: 3px;
-
     padding: 3px 9px;
-
     background: var(--cor-tecnologia-fundo-morse);
-
     color: var(--cor-tecnologia-morse);
-
     border: 1px solid #555;
-
     border-radius: 7px;
-
     font-size: 11px;
 }
 
 .morse .projeto-descricao p {
     margin-bottom: 16px;
-
     color: #222;
-
-    font-size: 14px;
-
-    line-height: 1.5;
 }
 
 .morse .botao-git {
-    position: absolute;
-
-    z-index: 20;
-
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-
-    height: 54px;
-    min-height: 54px;
-
-    background: linear-gradient(
-        90deg,
-        #707070,
-        #d9d9d9
-    );
+    background: linear-gradient(90deg, #707070, #d9d9d9);
 }
 
 
 /* =====================================================
-   REGRESSÃO LINEAR MÚLTIPLA
+   REGRESSÃO
 ===================================================== */
 
 .regressao {
     --vermelho-principal: #e50914;
-    --vermelho-escuro: #8b0000;
-    --vermelho-medio: #c90012;
-    --vermelho-claro: #ff6b6b;
-
     --fundo-regressao: #18090b;
     --fundo-descricao-regressao: #202124;
-
     --texto-regressao: #fff;
     --texto-secundario-regressao: #ddd;
-
     --cor-tecnologia: #ff7070;
     --cor-botao: #b30000;
-
     position: relative;
-
     background: var(--fundo-regressao);
-
-    height: clamp(560px, 75vh, 780px);
-
     overflow: hidden;
 }
 
 .regressao .titulo-projeto {
     position: relative;
-
     z-index: 10;
-
-    height: 52px;
-    min-height: 52px;
-
-    background: linear-gradient(
-        90deg,
-        #b30000,
-        #e50914,
-        #ff8a8a
-    );
-
-    color: #000;
-
-    border-radius: 20px;
+    background: linear-gradient(90deg, #8b0000, #b30000, #e50914);
+    color: #fff;
 }
 
 .regressao .titulo-projeto h2 {
+    color: #fff;
     font-size: 30px;
-
     font-weight: bold;
 }
 
 .regressao .projeto-conteudo {
     position: relative;
-
-    display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     align-items: center;
-
-    gap: 40px;
-
     height: calc(100% - 52px);
-
     padding: 25px 40px 75px;
-
     overflow: hidden;
 }
 
 .regressao .projeto-imagens {
-    display: flex;
-
     align-items: center;
     justify-content: center;
-
     width: 100%;
     height: 100%;
-
     padding: 10px;
 }
 
 .regressao .projeto-imagens img {
     width: 100%;
-
     max-width: 650px;
     max-height: 500px;
-
     object-fit: contain;
-
     border-radius: 15px;
-
     background: #fff;
-
     box-shadow:
         0 0 0 2px rgba(229, 9, 20, .35),
         0 10px 30px rgba(0, 0, 0, .35);
@@ -1589,128 +870,61 @@ body {
 
 .regressao .projeto-descricao {
     align-self: center;
-
     width: 100%;
-
     max-width: 500px;
-
     min-height: 300px;
     max-height: 430px;
-
     padding: 30px 28px;
-
     background: var(--fundo-descricao-regressao);
-
     color: var(--texto-regressao);
-
-    border-radius: 15px;
-
     border: 1px solid rgba(229, 9, 20, .25);
-
+    border-radius: 15px;
     overflow-y: auto;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, .3);
 }
 
 .regressao .projeto-descricao:hover {
     border-color: var(--vermelho-principal);
-
-    box-shadow:
-        0 0 20px rgba(229, 9, 20, .15);
+    box-shadow: 0 0 20px rgba(229, 9, 20, .15);
 }
 
 .regressao .projeto-descricao h3 {
-    display: flex;
-
-    align-items: center;
-
     gap: 10px;
-
     margin-bottom: 28px;
-
     font-size: 18px;
 }
 
 .regressao .projeto-descricao span {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
     padding: 5px 12px;
-
     color: #ff7070;
-
     background: #241014;
-
     border: 1px solid var(--vermelho-principal);
-
     border-radius: 8px;
-
     font-size: 15px;
-
     font-weight: bold;
 }
 
 .regressao .projeto-descricao h4 {
     margin-bottom: 18px;
-
     color: #ff4d4d;
-
     font-size: 22px;
 }
 
 .regressao .projeto-descricao p {
-    margin-bottom: 18px;
-
     color: var(--texto-secundario-regressao);
-
     font-size: 15px;
-
     line-height: 1.7;
 }
 
 .regressao .botao-git {
-    position: absolute;
-
-    z-index: 20;
-
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-
-    height: 54px;
-    min-height: 54px;
-
     padding-left: 22px;
-
-    background: linear-gradient(
-        90deg,
-        #b30000,
-        #e50914,
-        #ff9999
-    );
-
-    color: #000;
-
-    font-size: 27px;
-
-    font-weight: bold;
-
-    text-decoration: none;
-
-    border-radius: 10px;
+    color: #fff;
+    background: linear-gradient(90deg, #8b0000, #b30000, #e50914);
 }
 
 .regressao .botao-git:hover {
     filter: brightness(1.1);
-
     transform: translateY(-2px);
-
-    box-shadow:
-        0 5px 20px rgba(229, 9, 20, .35);
+    box-shadow: 0 5px 20px rgba(229, 9, 20, .35);
 }
 
 
@@ -1724,13 +938,11 @@ body {
 
 .projeto-descricao::-webkit-scrollbar-track {
     background: #151515;
-
     border-radius: 10px;
 }
 
 .projeto-descricao::-webkit-scrollbar-thumb {
     background: var(--cor-tecnologia, #555);
-
     border-radius: 10px;
 }
 
@@ -1755,18 +967,12 @@ body {
 
     .botao-voltar {
         left: 10px;
-
         font-size: 11px;
-
         padding: 6px 10px;
     }
 
-
-    /* CARROSSEL */
-
     .carousel-container {
         width: calc(100% - 80px);
-
         max-width: none;
     }
 
@@ -1774,41 +980,24 @@ body {
         width: 100%;
     }
 
-
-    /* PROJETOS */
-
-    .projeto {
+    .projeto,
+    .portifolio {
         width: calc(100vw - 80px);
-
         min-width: calc(100vw - 80px);
-
         height: clamp(600px, 82vh, 740px);
     }
-
-
-    /* BOTÕES */
 
     .carousel-btn {
         width: 40px;
         height: 40px;
-
         font-size: 26px;
     }
 
-    .anterior {
-        left: -48px;
-    }
-
-    .proximo {
-        right: -48px;
-    }
-
-
-    /* CONTEÚDO */
+    .anterior { left: -48px; }
+    .proximo { right: -48px; }
 
     .projeto-conteudo {
         grid-template-columns: 1fr;
-
         gap: 18px;
     }
 
@@ -1838,9 +1027,7 @@ body {
 
     .eliptic-descricao {
         top: 110px;
-
         width: calc(100% - 30px);
-
         height: 400px;
     }
 
@@ -1850,7 +1037,6 @@ body {
     .morse .titulo-morse {
         height: 60px;
         min-height: 60px;
-
         padding-left: 18px;
     }
 
@@ -1860,13 +1046,9 @@ body {
 
     .morse .projeto-conteudo {
         grid-template-columns: 1fr;
-
         gap: 15px;
-
         height: calc(100% - 60px);
-
         padding: 20px 20px 70px;
-
         overflow-y: auto;
     }
 
@@ -1877,45 +1059,21 @@ body {
     .morse .projeto-imagens img {
         width: 100%;
         height: 220px;
-
-        object-fit: contain;
     }
 
     .morse .projeto-descricao {
         width: 100%;
-
         min-height: 230px;
         max-height: 300px;
-
         padding: 20px;
-    }
-
-    .morse .botao-git {
-        height: 50px;
-        min-height: 50px;
-
-        font-size: 23px;
     }
 
 
     /* PORTFÓLIO */
 
-    .portifolio {
-        /*
-           No celular ele segue exatamente o mesmo
-           tamanho dos outros projetos.
-        */
-        width: calc(100vw - 80px);
-
-        min-width: calc(100vw - 80px);
-
-        height: clamp(600px, 82vh, 740px);
-    }
-
     .portifolio .titulo-projeto {
         height: 60px;
         min-height: 60px;
-
         padding-left: 18px;
     }
 
@@ -1925,35 +1083,21 @@ body {
 
     .portifolio .projeto-conteudo {
         grid-template-columns: 1fr;
-
         gap: 18px;
-
         height: calc(100% - 60px);
-
         padding: 20px 20px 70px;
-
         overflow-y: auto;
     }
 
     .portifolio .projeto-imagens {
         height: 250px;
-
         min-height: 250px;
-    }
-
-    .portifolio .projeto-imagens img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
     }
 
     .portifolio .projeto-descricao {
         width: 100%;
-
         min-height: 250px;
         max-height: 330px;
-
         padding: 20px;
     }
 
@@ -1961,28 +1105,12 @@ body {
         font-size: 16px;
     }
 
-    .portifolio .projeto-descricao p {
-        font-size: 14px;
-    }
-
-    .portifolio .botao-git {
-        height: 50px;
-        min-height: 50px;
-
-        font-size: 23px;
-    }
-
 
     /* REGRESSÃO */
-
-    .regressao {
-        height: clamp(600px, 82vh, 740px);
-    }
 
     .regressao .titulo-projeto {
         height: 60px;
         min-height: 60px;
-
         padding-left: 18px;
     }
 
@@ -1992,35 +1120,26 @@ body {
 
     .regressao .projeto-conteudo {
         grid-template-columns: 1fr;
-
         gap: 20px;
-
         height: calc(100% - 60px);
-
         padding: 20px 20px 70px;
-
         overflow-y: auto;
     }
 
     .regressao .projeto-imagens {
         height: 280px;
-
         padding: 0;
     }
 
     .regressao .projeto-imagens img {
         width: 100%;
         height: 270px;
-
-        object-fit: contain;
     }
 
     .regressao .projeto-descricao {
         width: 100%;
-
         min-height: 260px;
         max-height: 350px;
-
         padding: 22px;
     }
 
@@ -2034,12 +1153,5 @@ body {
 
     .regressao .projeto-descricao p {
         font-size: 14px;
-    }
-
-    .regressao .botao-git {
-        height: 52px;
-        min-height: 52px;
-
-        font-size: 23px;
     }
 }

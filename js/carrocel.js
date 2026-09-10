@@ -1,13 +1,13 @@
 const imagens = [
-    "../img/viagem.png",
-    "../img/bordado.png",
-    "../img/salgado.png",
-    "../img/churasco.png",
-    "../img/megui.png",
-    "../img/academia.png",
-    "../img/fut.png",
-    "../img/jogo.png",
-    "../img/cinuca.png"
+    "../img/viagem.webp",
+    "../img/bordado.webp",
+    "../img/salgado.webp",
+    "../img/churasco.webp",
+    "../img/megui.webp",
+    "../img/academia.webp",
+    "../img/fut.webp",
+    "../img/jogo.webp",
+    "../img/cinuca.webp"
 ];
 
 // Descrição de cada imagem, na mesma ordem do array acima.
