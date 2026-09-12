@@ -12,7 +12,7 @@
 body {
     background: #27292c;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
@@ -188,7 +188,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     padding: 22px 26px 16px;
-    font-family: Ubuntu, Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .projeto-imagens {
@@ -227,7 +227,12 @@ body {
     gap: 8px;
     margin-bottom: 20px;
     font-size: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    text-align: justify;
 }
+
 
 .projeto-descricao p,
 .eliptic-descricao p {
